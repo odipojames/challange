@@ -1,5 +1,6 @@
 ## Requirements
 - python3+
+- install pandas
 ```
 clone to your device
 ```

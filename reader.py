@@ -1,18 +1,13 @@
-import csv
+import pandas as pd
+df = pd.read_csv("mock_data.csv")
+males = 0
+females = 0
+gender_column = df['gender']
+for row in gender_column:
+    if row == "Male":
+        males += 1
+    else:
+        females += 1
 
-with open('mock_data.csv') as csvfile:
-
-    m,f = 0,0
-    for row in csv.DictReader(csvfile):
-        id,first_name,last_name,email,gender =row
-        next(csvfile)
-        if row["gender"] == 'Male':
-            m += 1
-        else:
-            f += 1
-
-
-print("Total male = {}".format(m))
-print("Total female = {}".format(f))
-
-csvfile.close()
+print("The males are "+str(males))
+print("The females are "+str(females))
