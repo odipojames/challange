@@ -9,7 +9,7 @@ with open('mock_data.csv') as csvfile:
         if row['gender'] == 'Male':
             m = m+1
         if  row['gender'] == 'Female':
-            f =f+1
+            f = f+1
 
 
 print("Total male = {}".format(m))
